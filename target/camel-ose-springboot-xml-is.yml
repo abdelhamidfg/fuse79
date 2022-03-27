@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: camel-ose-springboot-xml
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: camel-ose-springboot-xml@sha256:e70f0d0244658d2334c3ded5522abc99da4156532598561bb59d0414f881f840
+        namespace: fuse-3scale
+      name: latest

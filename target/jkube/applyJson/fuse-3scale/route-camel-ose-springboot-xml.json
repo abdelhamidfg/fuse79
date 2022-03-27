@@ -1,0 +1,83 @@
+{
+  "apiVersion" : "route.openshift.io/v1",
+  "kind" : "Route",
+  "metadata" : {
+    "creationTimestamp" : "2022-03-27T05:10:57Z",
+    "labels" : {
+      "app" : "camel-ose-springboot-xml",
+      "group" : "org.mycompany",
+      "provider" : "jkube",
+      "version" : "1.0.0-SNAPSHOT"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "route.openshift.io/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:port" : {
+            "." : { },
+            "f:targetPort" : { }
+          },
+          "f:to" : {
+            "f:kind" : { },
+            "f:name" : { },
+            "f:weight" : { }
+          },
+          "f:wildcardPolicy" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2022-03-27T05:10:57Z"
+    }, {
+      "apiVersion" : "route.openshift.io/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:ingress" : { }
+        }
+      },
+      "manager" : "openshift-router",
+      "operation" : "Update",
+      "time" : "2022-03-27T05:10:57Z"
+    } ],
+    "name" : "camel-ose-springboot-xml",
+    "namespace" : "fuse-3scale",
+    "resourceVersion" : "307523",
+    "uid" : "fc7e0bc5-128e-4b9d-a71c-f7e7db40f913"
+  },
+  "spec" : {
+    "host" : "camel-ose-springboot-xml-fuse-3scale.apps.cluster-z747c.z747c.sandbox824.opentlc.com",
+    "port" : {
+      "targetPort" : 8080
+    },
+    "to" : {
+      "kind" : "Service",
+      "name" : "camel-ose-springboot-xml",
+      "weight" : 100
+    },
+    "wildcardPolicy" : "None"
+  },
+  "status" : {
+    "ingress" : [ {
+      "conditions" : [ {
+        "lastTransitionTime" : "2022-03-27T05:10:57Z",
+        "status" : "True",
+        "type" : "Admitted"
+      } ],
+      "host" : "camel-ose-springboot-xml-fuse-3scale.apps.cluster-z747c.z747c.sandbox824.opentlc.com",
+      "routerCanonicalHostname" : "apps.cluster-z747c.z747c.sandbox824.opentlc.com",
+      "routerName" : "default",
+      "wildcardPolicy" : "None"
+    } ]
+  }
+}
